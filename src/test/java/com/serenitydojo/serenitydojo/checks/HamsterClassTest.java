@@ -1,4 +1,4 @@
-package com.serenitydojo.checks;
+package com.serenitydojo.serenitydojo.checks;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class HamsterClassTest {
     @Test
-    public void theDogClassShouldExist() throws ClassNotFoundException {
+    public void theHamsterClassShouldExist() throws ClassNotFoundException {
         assertThat(Class.forName("com.serenitydojo.Hamster")).isNotNull();
     }
 
@@ -19,17 +19,17 @@ public class HamsterClassTest {
     }
 
     @Test
-    public void theDogClassShouldHaveAFavoriteToy() throws Exception {
+    public void theHamsterClassShouldHaveAFavoriteToy() throws Exception {
         assertThat(Class.forName("com.serenitydojo.Hamster").getDeclaredField("favoriteGame").getGenericType()).isEqualTo(String.class);
     }
 
     @Test
-    public void theDogClassShouldHaveAMethodCalledMakeNoise() throws Exception {
+    public void theHamsterClassShouldHaveAMethodCalledMakeNoise() throws Exception {
         assertThat(Class.forName("com.serenitydojo.Dog").getMethod("makeNoise").getReturnType()).isEqualTo(String.class);
     }
 
     @Test
-    public void theDogClassShouldHaveAConstantField_MAKE_NOISE() throws Exception {
+    public void theHamsterClassShouldHaveAConstantField_MAKE_NOISE() throws Exception {
         Field makeNoise = Class.forName("com.serenitydojo.Dog").getDeclaredField("DOG_NOISE");
         assertThat(makeNoise.getType()).isEqualTo(String.class);
         assertThat(Modifier.isFinal(makeNoise.getModifiers())).isTrue();

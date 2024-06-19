@@ -1,5 +1,9 @@
-package com.serenitydojo;
+package com.serenitydojo.serenitydojo;
 
+import com.serenitydojo.Cat;
+import com.serenitydojo.Dog;
+import com.serenitydojo.Pet;
+import com.serenitydojo.Hamster;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -18,32 +22,23 @@ public class WhenCreatingObjects {
     @Test
     public void whenADogBarks() {
         Dog fido = new Dog("Fido","Bone", 5);
-
-        String dogSound = "";
-        // TODO: implement a method in the Dog sound called makeNoise() that returns the sound a dog makes: "Woof", e.g.
-        dogSound = fido.makeNoise();
-
+        String dogSound = fido.makeNoise();
         Assert.assertEquals(dogSound, "Woof");
     }
 
     @Test
     public void whenADogGetsFed() {
         Dog fido = new Dog("Fido","Bone", 5);
-
-        // TODO: implement a method in the Dog sound called feed() that sets the isFed variable to true:
          fido.feed();
-
         Assert.assertTrue(fido.isFed());
-
     }
 
     @Test
     public void whenAnimalsPlay() {
-// TODO: Uncomment me
 
         Pet fido = new Dog("Fido","Bone", 5);
         Pet spot = new Cat("Spot","String", 5);
-        Pet hazel = new Hamster("Hazel", 1, "Wheel");
+        Pet hazel = new Hamster("Hazel", 1, "wheel");
 
         assertThat(fido.play(), equalTo("plays with bone"));
         assertThat(spot.play(), equalTo("plays with string"));

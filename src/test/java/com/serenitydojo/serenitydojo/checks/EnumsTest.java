@@ -1,4 +1,4 @@
-package com.serenitydojo.checks;
+package com.serenitydojo.serenitydojo.checks;
 
 import org.junit.Test;
 

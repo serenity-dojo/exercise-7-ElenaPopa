@@ -1,6 +1,6 @@
 package com.serenitydojo;
 
-public class Dog extends Pet {
+public class  Dog extends Pet {
     private String favoriteToy;
     private boolean isFed = false;
 
